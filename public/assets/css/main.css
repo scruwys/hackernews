@@ -1,0 +1,103 @@
+table tr td:first-child {
+	width: 28px;
+}
+table tr td:last-child {
+	width: 110px;
+	padding-right: 20px;
+}
+#settings label {
+	display: inline-block;
+}
+#settings p {
+	display: inline-block;
+	font-size: 14px;
+}
+#settings input {
+	margin-bottom: 0;
+}
+#settings .small-11 {
+	display: inline-block;
+}
+#myStories {
+	margin: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+#myStories p {
+	margin: 5px 0;
+}
+#myStories a {
+	font-size: 14px;
+}
+#feed {
+	width: 100%;
+}
+#feed p {
+	margin-bottom: 0;
+}
+.sub-nav {
+	margin-bottom: 0;
+}
+.sub-nav dt, .sub-nav dd {
+	margin-bottom: 0;
+}
+.button {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+.form {
+	max-width: 300px;
+	padding: 19px 29px 29px;
+	margin: 0 auto 20px;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+}
+.form,
+.form .checkbox {
+	margin-bottom: 10px;
+}
+.form input[type="text"],
+.form input[type="password"] {
+	font-size: 16px;
+	height: auto;
+	margin-bottom: 15px;
+	padding: 7px 9px;
+}
+ul.pagination li {
+	padding: 0 5px;
+	margin: 0;
+}
+ul.pagination li a {
+	padding: 0 5px;
+}
+ul.pagination li.disabled span {
+	padding: 0 5px;
+}
+ul.pagination li.active {
+	margin: 0 5px;
+	background: #2ba6cb;
+	color: #fff;
+	font-weight: bold;
+	cursor: default;
+}
+.label {
+	border: 0;
+}
+.panel {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.alert-small {
+	max-width: 300px;
+	margin: 0 auto 20px;
+}
+.no-margin {
+	margin: 0;
+}
+.inline-block {
+	display: inline-block;
+}
+#search {
+	margin: 0;
+	width: 140px;
+}
