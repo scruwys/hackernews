@@ -2,19 +2,19 @@
 
 class UserValidator extends Mailer {
 
-	public function accountActivation()
-	{
-		$this->subject = 'Active your Rideless account';
-		$this->view = 'emails.user.activate';
+    public function accountActivation()
+    {
+        $this->subject = 'Active your Rideless account';
+        $this->view = 'emails.user.activate';
 
-		return $this;
-	}
+        return $this;
+    }
 
-	public function welcome()
-	{
-		$this->subject = 'Welcome to Rideless!';
-		$this->view = 'emails.user.welcome';
+    public function welcome()
+    {
+        $this->subject = 'Welcome to Rideless!';
+        $this->view = 'emails.user.welcome';
 
-		return $this;
-	}
+        return $this;
+    }
 }

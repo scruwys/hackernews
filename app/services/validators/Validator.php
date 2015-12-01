@@ -2,34 +2,34 @@
 
 abstract class Validator {
 
-	protected $attributes;
+    protected $attributes;
 
-	protected $rules;
+    protected $rules;
 
-	protected $messages;
+    protected $messages;
 
-	public $errors;
+    public $errors;
 
-	public function __construct($attributes = null)
-	{
-		$this->attributes = $attributes ?: \Input::all();
-	}
+    public function __construct($attributes = null)
+    {
+        $this->attributes = $attributes ?: \Input::all();
+    }
 
-	public function fails()
-	{
-		$validation = \Validator::make($this->attributes, $this->rules, $this->messages);
+    public function fails()
+    {
+        $validation = \Validator::make($this->attributes, $this->rules, $this->messages);
 
-		if ( $validation->fails() )
-		{
-			$this->errors = $validation->messages();
-			return true;
-		} 
-		return false;
-	}
+        if ( $validation->fails() )
+        {
+            $this->errors = $validation->messages();
+            return true;
+        } 
+        return false;
+    }
 
-	public function getErrors()
-	{
-		return $this->errors;
-	}
+    public function getErrors()
+    {
+        return $this->errors;
+    }
 
 }

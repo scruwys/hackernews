@@ -5,66 +5,66 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
-	/**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
-	protected $table = 'users';
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected $table = 'users';
 
-	/**
-	 * Timestamp fields are used by the model.
-	 * @var boolean
-	 */
+    /**
+     * Timestamp fields are used by the model.
+     * @var boolean
+     */
     public $timestamps = true;
 
-	protected $guarded = [];
+    protected $guarded = [];
 
-	public static $rules = [];
+    public static $rules = [];
 
-	public function stories()
-	{
-		return $this->hasMany('Story');
-	}
+    public function stories()
+    {
+        return $this->hasMany('Story');
+    }
 
-	public function hasCredentials($pwd)
-	{
-		return Hash::check($pwd, $this->password);
-	}
+    public function hasCredentials($pwd)
+    {
+        return Hash::check($pwd, $this->password);
+    }
 
-	/**
-	 * Get the unique identifier for the user.
-	 *
-	 * @return mixed
-	 */
-	public function getAuthIdentifier()
-	{
-		return $this->getKey();
-	}
+    /**
+     * Get the unique identifier for the user.
+     *
+     * @return mixed
+     */
+    public function getAuthIdentifier()
+    {
+        return $this->getKey();
+    }
 
-	/**
-	 * Get the password for the user.
-	 *
-	 * @return string
-	 */
-	public function getAuthPassword()
-	{
-		return $this->password;
-	}
+    /**
+     * Get the password for the user.
+     *
+     * @return string
+     */
+    public function getAuthPassword()
+    {
+        return $this->password;
+    }
 
-	/**
-	 * Get the e-mail address where password reminders are sent.
-	 *
-	 * @return string
-	 */
-	public function getReminderEmail()
-	{
-		return $this->email;
-	}
+    /**
+     * Get the e-mail address where password reminders are sent.
+     *
+     * @return string
+     */
+    public function getReminderEmail()
+    {
+        return $this->email;
+    }
 
-	public function getStoryCount()
-	{
-		return Story::where('author', '=', Auth::user()->username)->count();
-	}
+    public function getStoryCount()
+    {
+        return Story::where('author', '=', Auth::user()->username)->count();
+    }
 
 }
