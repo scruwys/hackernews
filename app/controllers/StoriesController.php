@@ -38,12 +38,12 @@ class StoriesController extends BaseController {
 
         //     $pool = DB::table('stories')
         //         ->join('votes', 'stories.id', '=', 'votes.story')
-  //               ->select('stories.id')
-  //               ->where('author', '=', Auth::user()->username);
+        //         ->select('stories.id')
+        //         ->where('author', '=', Auth::user()->username);
             
-  //           $stories = Story::where('id', '')
+        //     $stories = Story::where('id', '')
 
-  //           $paginator = $stories->paginate(10);
+        //     $paginator = $stories->paginate(10);
             
         //     $stories = $stories->get();
         // }
